@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind</title>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/tailwind.js"></script>
+    <script>
+      tailwind.config = {};
+    </script>
+    <link rel="stylesheet" href="css/animated.css" />
+  </head>
+  <!--El max h screen y overflow-y-hidden es para que ningun slide sobrepase el alto de un ipad en horizontal-->
+  <body class="">
+    <div class="mx-auto"> <!--w-[1920px]-->
+
+      <nav class="bg-gray-800 flex justify-between lg:justify-start item-center">
+        <div class="logo p-2 w-1/6">
+           <img width="100" src="images/logo.png" />
+        </div>
+
+        <div class="links lg:block hidden w-1/6 md:w-4/6">
+          <ul class="menu flex items-center justify-center gap-5 item-center"> 
+            <li><a class="text-white block p-5 font-bold hover:text-yellow-500" href="#">Home</a></li>
+            <li><a class="text-white block p-5 font-bold hover:text-yellow-500" href="#">Play Together</a></li>
+            <li><a class="text-white block p-5 font-bold hover:text-yellow-500" href="#">Explore</a></li>
+            <li><a class="border-4 px-2 py-2 border-yellow-400 text-white font-bold rounded-full hover:bg-white hover:text-black transition duration-500" href="#">Bowser Fury</a></li>
+            <li><a class="bg-red-500 rounded-full text-white px-3 py-2" href="#">Buy Now</a></li>
+          </ul>
+        </div>
+
+        <div class="block lg:hidden w-1/6 lg:w-4/6">
+          <a id="mobile-menu" class=" text-white flex pt-5 item-center hover:text-yellow-500 font-bold" href="#">Menu</a>
+          <ul class="mobile-links hidden w-full absolute z-50 left-0 text-center bg-gray-800"> 
+            <li><a class="text-white block p-5 font-bold hover:text-yellow-500" href="#">Home</a></li>
+            <li><a class="text-white block p-5 font-bold hover:text-yellow-500" href="#">Play Together</a></li>
+            <li><a class="text-white block p-5 font-bold hover:text-yellow-500" href="#">Explore</a></li>
+            <li><a class="my-4 inline-block border-4 px-2 py-2 border-yellow-400 text-white font-bold rounded-full hover:bg-white hover:text-black transition duration-500" href="#">Bowser Fury</a></li>
+            <li><a class="my-4 inline-block bg-red-500 rounded-full text-white px-3 py-2" href="#">Buy Now</a></li>
+          </ul>
+        </div>
+      </nav>
+
+       
+       <section class="header">
+          <img src="./images/hero.jpg" />
+       </section>
+
+       <section class="">
+         <div class="bg-wave-pattern h-6 bg-repeat-x relative -top-2">
+
+         </div>
+
+         <div class="bg-wave-pattern-dots text-center p-4 flex md:flex-row flex-col gap-3 justify-center">
+          <a class="inline-block py-3 px-16 bg-black text-white font-bold border-transparet border-8 text-2xl rounded-3xl hover:bg-gray-200 hover:bg-white hover:text-black transition duration-200" href="#">Buy Now</a>
+          <a class="inline-block py-3 px-16 bg-red-500 text-white font-bold border-transparet border-8 text-2xl rounded-3xl hover:bg-gray-200 hover:bg-white hover:text-black transition duration-200" href="#">Watch the</a>
+         </div>
+
+         <div class="bg-wave-pattern bg-repeat-x h-6 relative top-2">
+
+         </div>
+       </section>
+
+       <section class="bg-red-500 h-6 py-28">
+
+       </section>
+
+    </div>
+
+    <script>
+      const menuButton = document.querySelector('#mobile-menu');
+
+      menuButton.addEventListener('click', e => {
+        const menu = document.querySelector('.mobile-links');
+
+        menu.classList.toggle('hidden');
+      }) 
+      
+    </script>
+  </body>
+</html>
